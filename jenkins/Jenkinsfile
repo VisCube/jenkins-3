@@ -24,7 +24,7 @@ pipeline {
       steps {
         sh '''
         . venv/bin/activate
-        python -m py_compile sources/add_vals.py sources/calc.py
+        python -m py_compile sources/add2vals.py sources/calc.py
         '''
         stash(name: 'compiled-results', includes: 'sources/*.py*')
       }
@@ -56,3 +56,4 @@ pipeline {
     }
   }
 }
+
